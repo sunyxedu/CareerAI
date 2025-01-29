@@ -2,16 +2,40 @@ import os
 from dotenv import load_dotenv
 from openai import OpenAI
 from datetime import date
-from rating_system import analyze_resume
+import csv
 
-def generate_cover_letter(resume_scores, company_name, highlights, job_link=None):
+def read_personal_info_from_csv(name):
     """
-    Generate a cover letter based on resume analysis and company details.
+    Read personal information from the CSV file.
     
     Args:
-        resume_scores (dict): Resume section scores from rating system
+        name (str): Name of the person (used in CSV filename)
+    
+    Returns:
+        dict: Personal information including name, email, and phone
+    """
+    filename = f'resume_analysis_{name.lower().replace(" ", "_")}.csv'
+    personal_info = {}
+    
+    try:
+        with open(filename, 'r') as f:
+            reader = csv.reader(f)
+            for row in reader:
+                if row[0] == 'Personal Info':
+                    personal_info[row[1].lower()] = row[3]
+        return personal_info
+    except Exception as e:
+        print(f"Error reading CSV file: {e}")
+        return None
+
+def generate_cover_letter(name, company_name, highlights, job_link=None):
+    """
+    Generate a cover letter based on personal info and company details.
+    
+    Args:
+        name (str): Full name of the applicant
         company_name (str): Name of the company
-        highlights (list): Key highlights from resume analysis
+        highlights (list): Key highlights from resume
         job_link (str, optional): Link to job posting
     
     Returns:
@@ -22,19 +46,20 @@ def generate_cover_letter(resume_scores, company_name, highlights, job_link=None
         load_dotenv()
         client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
         
-        # Extract key strengths from resume scores
-        strengths = []
-        for section, items in resume_scores.items():
-            if isinstance(items, list):
-                top_items = sorted(items, key=lambda x: x['score'], reverse=True)[:2]
-                for item in top_items:
-                    if item['score'] >= 7:  # Only include high-scoring items
-                        strengths.append(f"{item['name']} from {section}")
+        # Get personal info from CSV
+        personal_info = read_personal_info_from_csv(name)
+        
+        # print(personal_info['name'], personal_info['email'], personal_info['phone'])
+        
+        if not personal_info:
+            raise Exception("Could not read personal information from CSV")
 
         # Create prompt for GPT
         prompt = f"""Write a professional cover letter with the following details:
         Company: {company_name}
-        Key Strengths: {', '.join(strengths)}
+        Job Seeker's Name: {personal_info['name']}
+        Job Seeker's Email: {personal_info['email']}
+        Job Seeker's Phone: {personal_info['phone']}
         Key Highlights: {', '.join(highlights)}
         
         The letter should:
@@ -73,36 +98,34 @@ def generate_cover_letter(resume_scores, company_name, highlights, job_link=None
         return None
 
 def test_cover_letter_generation():
-    # Get resume scores from rating system
-    pdf_path = "/Users/yuxuan/Documents/CareerAI/Resume.pdf"
-    try:
-        overall_score, section_scores, highlights, weaknesses = analyze_resume(pdf_path)
-        
-        # Test data
-        company_name = "Copper.co"
-        job_link = "https://bit.ly/40wPQvb"
+    # Test data
+    name = "Yuxuan Sun"  # This should match the name used in CSV filename
+    company_name = "Copper.co"
+    highlights = [
+        "Strong experience in Python development",
+        "Machine learning expertise",
+        "Previous internship at tech companies"
+    ]
+    job_link = "https://bit.ly/40wPQvb"
 
-        # Generate cover letter using actual resume analysis
-        cover_letter = generate_cover_letter(
-            resume_scores=section_scores,
-            company_name=company_name,
-            highlights=highlights,
-            job_link=job_link
-        )
-        
-        # Assertions
-        assert cover_letter is not None, "Cover letter should not be None"
-        assert len(cover_letter) > 0, "Cover letter should not be empty"
-        assert company_name in cover_letter, "Cover letter should mention company name"
-        
-        # Print the generated cover letter
-        print("\nGenerated Cover Letter:")
-        print("=" * 50)
-        print(cover_letter)
-        print("=" * 50)
-        
-    except Exception as e:
-        print(f"Error in test: {e}")
+    # Generate cover letter
+    cover_letter = generate_cover_letter(
+        name=name,
+        company_name=company_name,
+        highlights=highlights,
+        job_link=job_link
+    )
+    
+    # Assertions
+    assert cover_letter is not None, "Cover letter should not be None"
+    assert len(cover_letter) > 0, "Cover letter should not be empty"
+    assert company_name in cover_letter, "Cover letter should mention company name"
+    
+    # Print the generated cover letter
+    print("\nGenerated Cover Letter:")
+    print("=" * 50)
+    print(cover_letter)
+    print("=" * 50)
 
 if __name__ == "__main__":
     test_cover_letter_generation()

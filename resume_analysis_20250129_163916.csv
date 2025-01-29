@@ -1,0 +1,18 @@
+Category,Name,Score,Feedback
+Overall,Resume,8,
+Projects,AlphaGen,8,"Led by an experienced mentor, involving complex techniques like CNN/ViT, LSTM, and Imitation Learning. Strong demonstration of knowledge and leadership."
+Projects,Image super-resolution,7,Good implementation of SRGAN for image super-resolution. Effective use of loss functions to achieve results.
+Projects,ViolinOS,8,Showcases creativity and depth in C++ programming. The extent of features and code volume suggests robust technical skills.
+Projects,MNIST handwritten digit recognition,7,Solid understanding of machine learning techniques with impressive accuracy achievement in MLP.
+Projects,Other Projects,7,Diverse range of projects with applications in NLP and automated testing shows versatility and adaptability.
+Awards,USACO Platinum,9,"High distinction at a global competitive level, indicating problem-solving skills and perseverance."
+Awards,Codeforces Master,7,Strong competitive programming skills as demonstrated by Codeforces rating.
+Awards,National Olympiads in Informatics,8,Consistent top performance in a rigorous national competition reflects depth of knowledge in informatics.
+Awards,Mathematics Awards,8,Outstanding performance in multiple mathematical challenges indicates strong analytical skills.
+Awards,Binary Prediction on Kaggle,7,Good ranking on a competitive platform demonstrates practical machine learning expertise.
+Education,Imperial College London,8,Top-ranked university with a strong curriculum focus in Computing and Mathematics.
+Education,Nanjing Foreign Language School,7,Strong foundational education with notable achievements in computing and mathematics.
+Work Experience,Tencent,8,"Hands-on experience in high-impact research and machine learning projects, collaboration with academia and industry leaders highlights initiative and capability."
+Skills Interests,Machine Learning,8,Broad and deep understanding of both classic and deep learning models.
+Skills Interests,Programming,8,"Proficient in Python and C++, key skills for machine learning and algorithm development."
+Skills Interests,Natural Language Processing & Computer Vision,7,"Competent in specialized AI fields, leveraging state-of-the-art tools and techniques."

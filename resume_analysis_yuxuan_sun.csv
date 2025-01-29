@@ -1,0 +1,19 @@
+Category,Name,Score,Feedback
+Personal Info,Name,,Yuxuan Sun
+Personal Info,Email,,sunyxedu@gmail.com
+Personal Info,Phone,,(044) 07729-462072
+Overall,Resume,8,
+Education,Imperial College London,9,"Strong coursework relevant to Computing and Machine Learning, showing a solid foundation in both theoretical and practical aspects."
+Education,Nanjing Foreign Language School,8,"High school education at a reputable school, strong foundation in computing and mathematics."
+Awards,USACO Platinum,10,"Exceptional achievement, ranking 32 in the world demonstrates outstanding ability in competitive programming."
+Awards,National Olympiad in Informatics,9,"Multiple prizes at senior and junior levels, indicating consistent performance and growth in Informatics."
+Awards,Binary Prediction of Poisonous Mushrooms,8,"Strong performance in Kaggle competition, indicates practical machine learning application skills."
+Awards,Senior Mathematical Challenge,9,Full marks showcase excellent mathematical ability.
+Awards,STEP II&III,9,High grades on challenging exams indicate strong problem-solving skills.
+Work Experience,Tencent Researcher,9,"Valuable research experience with respected mentors. Worked on cutting-edge cryptographic research and machine learning integration, demonstrating capability in advanced topics and contributing to publications."
+Projects,AlphaGen,8,Led a complex project involving deep learning architectures. Good practical application of theoretical knowledge.
+Projects,Image super-resolution,8,"Implemented advanced GAN architectures for image processing, indicating strong understanding of applied deep learning."
+Projects,ViolinOS,9,"Developed a comprehensive command-line tool with diverse functionality, showcasing programming proficiency and team collaboration."
+Projects,MNIST handwritten digit recognition,8,"Achieved high accuracy with fundamental ML techniques, showing sound understanding of the basics and ability to implement custom solutions."
+Skills Interests,Machine Learning,9,"Comprehensive knowledge of classic and deep learning models, demonstrating versatility in the field."
+Skills Interests,Programming,9,"High proficiency in Python and C++, indicating strong technical skill set."

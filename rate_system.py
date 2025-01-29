@@ -1,8 +1,9 @@
 import os
-from xai import Grok
+from openai import OpenAI
 from dotenv import load_dotenv
 import PyPDF2
 from io import BytesIO
+import numpy as np
 
 load_dotenv()
 
@@ -26,7 +27,7 @@ def upload_and_analyze_resume(pdf_file_path: str):
     Upload a PDF resume for analysis using function calling.
     Returns the score, highlights, and weaknesses.
     """
-    client = Grok(api_key=os.environ.get("GROK_API_KEY"))
+    client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
 
     with open(pdf_file_path, "rb") as pdf_file:
         pdf_content = pdf_file.read()
@@ -62,8 +63,8 @@ def upload_and_analyze_resume(pdf_file_path: str):
         }
     ]
 
-    response = client.chat.create(
-        model="grok-1",
+    response = client.chat.completions.create(
+        model="gpt-4",
         messages=[
             {"role": "system", "content": "You are a resume analysis expert."},
             {"role": "user", "content": f"Please analyze this resume: {truncated_text}"}

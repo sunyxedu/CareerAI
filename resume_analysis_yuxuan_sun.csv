@@ -2,18 +2,19 @@ Category,Name,Score,Feedback
 Personal Info,Name,,Yuxuan Sun
 Personal Info,Email,,sunyxedu@gmail.com
 Personal Info,Phone,,(044) 07729-462072
-Overall,Resume,8,
-Education,Imperial College London,9,"Strong coursework relevant to Computing and Machine Learning, showing a solid foundation in both theoretical and practical aspects."
-Education,Nanjing Foreign Language School,8,"High school education at a reputable school, strong foundation in computing and mathematics."
-Awards,USACO Platinum,10,"Exceptional achievement, ranking 32 in the world demonstrates outstanding ability in competitive programming."
-Awards,National Olympiad in Informatics,9,"Multiple prizes at senior and junior levels, indicating consistent performance and growth in Informatics."
-Awards,Binary Prediction of Poisonous Mushrooms,8,"Strong performance in Kaggle competition, indicates practical machine learning application skills."
-Awards,Senior Mathematical Challenge,9,Full marks showcase excellent mathematical ability.
-Awards,STEP II&III,9,High grades on challenging exams indicate strong problem-solving skills.
-Work Experience,Tencent Researcher,9,"Valuable research experience with respected mentors. Worked on cutting-edge cryptographic research and machine learning integration, demonstrating capability in advanced topics and contributing to publications."
-Projects,AlphaGen,8,Led a complex project involving deep learning architectures. Good practical application of theoretical knowledge.
-Projects,Image super-resolution,8,"Implemented advanced GAN architectures for image processing, indicating strong understanding of applied deep learning."
-Projects,ViolinOS,9,"Developed a comprehensive command-line tool with diverse functionality, showcasing programming proficiency and team collaboration."
-Projects,MNIST handwritten digit recognition,8,"Achieved high accuracy with fundamental ML techniques, showing sound understanding of the basics and ability to implement custom solutions."
-Skills Interests,Machine Learning,9,"Comprehensive knowledge of classic and deep learning models, demonstrating versatility in the field."
-Skills Interests,Programming,9,"High proficiency in Python and C++, indicating strong technical skill set."
+Overall,Resume,9,
+Projects,AlphaGen,9,"The project demonstrates advanced knowledge in deep learning and robotics. The implementation of CNN/ViT, LSTM, and Imitation Learning indicates a strong grasp on sophisticated algorithms."
+Projects,Image Super-Resolution,8,A solid implementation of SRGAN showcasing understanding of generative models. The use of dual loss functions is well-explained and executed.
+Projects,ViolinOS,8,Comprehensive development in C++ with an innovative approach to an advanced CLI tool. Expanding on standard CLI functions with additional creativity is commendable.
+Projects,MNIST Handwritten Digit Recognition,9,Excellent application of both classic and neural approaches to image classification. Achieving 98% accuracy with MLP without pre-built libraries demonstrates deep understanding.
+Projects,Others,7,"Variety of projects show versatility, but detail is lacking in explanation and outcomes in some. The mention of multiple projects adds breadth but reduces focus."
+Awards,USACO Platinum Rank 32,10,An exceptional achievement at a high level of programming competition.
+Awards,Codeforces Master Title,9,Advanced competitive programming skill demonstrated by high rating and title.
+Awards,National Olympiad in Informatics,10,Outstanding recognition in a highly competitive national contest.
+Awards,Binary Prediction of Poisonous Mushrooms,8,Strong performance in a global competition indicating practical application of skills.
+Awards,Senior Mathematical Challenge Full Mark,9,Exemplary performance in a respected mathematical challenge indicating strong analytical skills.
+Education,Imperial College London,9,Top-tier institution with relevant and rigorous computing curriculum.
+Education,Nanjing Foreign Language School,8,Strong foundational education. High school performance supports further study in computing.
+Work Experience,Researcher at Tencent,9,"High-impact role with significant contributions in cryptography and machine learning, showcasing research and development skills."
+Skills Interests,Machine Learning and AI,9,Comprehensive and deep expertise demonstrated in both classic and deep learning paradigms.
+Skills Interests,Programming and Development,8,Proficient in key programming languages relevant to current technology demands.

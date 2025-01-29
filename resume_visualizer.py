@@ -7,8 +7,8 @@ def load_analysis_data(analysis_csv_path):
     """Load and process the analysis CSV file"""
     df = pd.read_csv(analysis_csv_path)
     
-    # Calculate average scores for each section
-    section_averages = df[df['Category'] != 'Overall'].groupby('Category')['Score'].mean()
+    # Calculate average scores for each section, excluding Personal Info
+    section_averages = df[(df['Category'] != 'Overall') & (df['Category'] != 'Personal Info')].groupby('Category')['Score'].mean()
     
     return df, section_averages
 
@@ -44,7 +44,7 @@ def create_dashboard(analysis_csv_path):
         'Awards': (2, 1),
         'Education': (2, 2),
         'Work Experience': (3, 1),
-        'Skills & Interests': (3, 2)
+        'Skills Interests': (3, 2)
     }
 
     for section, (row, col) in sections.items():

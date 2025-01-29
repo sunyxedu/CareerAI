@@ -1,0 +1,29 @@
+<!-- public/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Interview Coach</title>
+    <link rel="stylesheet" href="interview_styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Job Interview Coach</h1>
+        <button id="speech-btn">Start Interview</button>
+        <div id="question-container">
+            <p id="question"></p>
+            <button id="listen-question-btn">🔊 Listen to Question</button>
+        </div>
+        <textarea id="answer" placeholder="Type your answer here..."></textarea>
+        <button id="submit-answer-btn">Submit Answer</button>
+        <div id="feedback-container">
+            <h2>Feedback:</h2>
+            <p id="feedback"></p>
+        </div>
+    </div>
+
+    <script src="interview_server.js"></script>
+</body>
+</html>
